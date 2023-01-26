@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .bg-base1 {
+    @apply bg-green-500;
+  }
+}
+
+/* reusable */
+.center {
+  @apply h-full w-full flex justify-center items-center
+}
+
+.flexCenter {
+  @apply flex justify-center items-center
+}
+
+.flexBetween {
+  @apply flex justify-between items-center
+}
+
+/* menu admin large screen */
+.sidebar-item {
+  @apply mb-2 p-2 rounded-md cursor-pointer flex gap-2 items-center text-sm
+}
+
+.sidebar-item:hover {
+  @apply bg-gray-300
+}
+
+.sidebar-item.active {
+  @apply shadow-md bg-base1 text-white
+}
+
+.sidebar-md-item {
+  @apply text-3xl
+}
